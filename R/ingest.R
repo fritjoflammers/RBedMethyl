@@ -28,8 +28,8 @@
 readBedMethyl <- function(bedmethyl, mod = "m", chunk_size = 5e6,
                           h5file = NULL, check_sorted = TRUE,
                           fields = c("coverage", "mod_reads")) {
-  if (!mod %in% c("m", "h")) {
-    stop("mod must be one of: 'm', 'h'.")
+  if (!mod %in% c("m", "h", "a")) {
+    stop("mod must be one of: 'm', 'h', 'a'.")
   }
   if (is.null(h5file)) {
     base <- basename(bedmethyl)
